@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Route Finder</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">
+                <div class="icon">⚕️</div>
+                <h1>MediRoute</h1>
+            </div>
+            
+            <div class="controls">
+                <div class="input-group">
+                    <label for="start-node">Current Location</label>
+                    <select id="start-node"></select>
+                </div>
+                
+                <div class="input-group">
+                    <label for="end-node">Destination</label>
+                    <select id="end-node"></select>
+                </div>
+                
+                <button id="find-route-btn" class="primary-btn">Find Route</button>
+                <button id="reset-btn" class="secondary-btn">Reset</button>
+            </div>
+            
+            <div class="info-panel">
+                <h3>Route Information</h3>
+                <div id="route-details">
+                    <p class="placeholder-text">Select a route to view details.</p>
+                </div>
+            </div>
+        </aside>
+        
+        <main class="map-area">
+            <div class="canvas-container">
+                <canvas id="hospital-map"></canvas>
+            </div>
+        </main>
+    </div>
+    
+    <script src="graph.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
